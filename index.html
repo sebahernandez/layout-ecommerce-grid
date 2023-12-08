@@ -3,27 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
     <link rel="stylesheet" href="./assets/css/style.css" />
+
     <title>Layout Ecommerce Grid</title>
   </head>
   <body>
     <section class="container">
-      <header>
+      <nav>
         <h1>Mi Ecommerce</h1>
-      </header>
+        <span class="material-icons">menu</span>
+          <ul class="enlaces">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#"></a>Catálogo</a></li>
+          <li><a href="#"></a>Ofertas</a></li>
+          <li><a href="#"></a>Contacto</a></li>
+        </ul>
+      </nav>
 
       <aside>
-        <nav>
-          <ul>
-            <h2>Categorías</h2>
-            <li><a href="#">Perfumes</a> <span> (13)</span></li>
-            <li><a href="#">Ropa </a><span> (21)</span></li>
-            <li><a href="#">Accesoríos</a><span> (41)</span></li>
-            <li><a href="#">Zapatos</a> <span> (10)</span></li>
-          </ul>
-        </nav>
+        <div class="order">
+          <label for="custom-select">Ordenar Por:</label>
+          <select class="custom-select">
+            <option selected disabled>Precio</option> <!-- Opción no seleccionable y mostrada por defecto -->
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
       </aside>
-
+    
       <main>
         <section class="products">
             <div class="card">
@@ -53,11 +65,53 @@
               <span class="price">34.700</span>
               <button class="btn">Comprar</button>
             </div>
+
+            <div class="card">
+              <img src="./assets/img/perfume.jpg" alt="Perfume" />
+              <h3>Perfume Ralp Lauren</h3>
+              <span class="price">130.700</span>
+              <button class="btn">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="./assets/img/perfume2.jpg" alt="Perfume" />
+            <h3>Perfume Giorgio Armani</h3>
+            <span class="price">94.700</span>
+            <button class="btn">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="./assets/img/poleron.jpg" alt="Perfume" />
+            <h3>Poleron Puma</h3>
+            <span class="price">44.700</span>
+            <button class="btn">Comprar</button>
+          </div>
+
+          <div class="card">
+            <img src="./assets/img/zapato.jpg" alt="Perfume" />
+            <h3>Perfume Ralp Lauren</h3>
+            <span class="price">34.700</span>
+            <button class="btn">Comprar</button>
+          </div>
+        </section>
+
+        <section aria-label="Page navigation" class="pages">
+          <ul class="pagination">
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
         </section>
       </main>
 
       <footer>
-        <h3>@miecommerce</h3>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <span>Todos los derechos reservados</span>
       </footer>
     </div>
   </body>
